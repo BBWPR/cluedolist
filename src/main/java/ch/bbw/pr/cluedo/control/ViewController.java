@@ -18,7 +18,7 @@ public class ViewController {
    @Autowired
    private DataService service;
 
-   @RequestMapping(value = {"/", "/showView"}, method = RequestMethod.GET)
+   @RequestMapping(value = {"/showView"}, method = RequestMethod.GET)
    public String showView(Model model){
       System.out.println("ViewController.showView");
       model.addAttribute("persons", service.getPersons() );
